@@ -1306,19 +1306,19 @@ class BioMod(loader.Module):
                 sms = ""
                 for i in lab_lines: # цикл for по всем строкам в тексте лабы
                     if "🧪 Готовых патогенов:" in i:
-                        sms += f"<emoji document_id=4983351017681715711>☺️</emoji>{i[1::]}\n"
+                        sms += f"<emoji document_id=6325557756862400290>💃</emoji> <b>--</b>{i[1::]}\n"
                     if "⏱ Новый патоген:" in i:
-                        sms += f"<emoji document_id=5294492325643296676>😆</emoji>{i[1::]}\n"
+                        sms += f"<emoji document_id=6325864821254261148>😏</emoji> <b>--</b>{i[1::]}\n"
                     if "☣️ Био-опыт:" in i:
-                        sms += f"<emoji document_id=6325524440801084490>🤣</emoji>{i[1::]}\n"
-                    if "🧬 Био-ресурс:" in i:
-                        sms += f"<emoji document_id=6325331270351979944>😄</emoji>{i[1::]}\n"
+                        sms += f"<emoji document_id=6205973162828498885>🥱</emoji> <b>--</b>{i[1::]}\n"
+                    if "🧬 <b>--</b> Био-ресурс:" in i:
+                        sms += f"🧬{i[1::]}\n"
                     if "❗️ Руководитель в состоянии горячки, вызванной болезнью" in i:
                         s = i.replace("❗️ Руководитель в состоянии горячки, вызванной болезнью ", "")
-                        sms += f"<emoji document_id=5271892860566774733>🚪</emoji> Горячка от {s}\n"
+                        sms += f"<emoji document_id=5272019978713833214>🚽</emoji> <b>--</b> Горячка от {s}\n"
                     if "❗️ Руководитель в состоянии горячки ещё" in i:
                         s = i.replace("❗️ Руководитель в состоянии горячки ещё ", "")
-                        sms += f"<emoji document_id=5271892860566774733>🚪</emoji> Горячка на {s}\n"
+                        sms += f"<emoji document_id=5272019978713833214>🚽</emoji> <b>--</b> Горячка на {s}\n"
                 await message.reply(sms) # ответ
 
 #######################################################
@@ -1452,10 +1452,10 @@ class BioMod(loader.Module):
                 a = reply.text
                 sms = ''
                 if "🔬 ТОП ЛАБОРАТОРИЙ БЕСЕДЫ" in a:
-                    sms += "🥰 топ вкусняшек чата:\n"
+                    sms += "<b>absolute?</b>\n"
                     
                 if "🔬 ТОП ЛАБОРАТОРИЙ ПО" in a:
-                    sms += "🔬 ТOП ЛАБОРАТOРИЙ ПО БИO-ОПЫТУ ЗАРAЖЁННЫХ:\n" #ТOП ИММУНОДРОЧЕРОВ:
+                    sms += "<b>absolute?</b>\n" #ТOП ИММУНОДРОЧЕРОВ:
         
                 if bt not in a and bch not in a and bk not in a and btz not in a and bchz not in a and ezha not in a and bol not in a:
                     return 
@@ -1670,7 +1670,7 @@ class BioMod(loader.Module):
 
         sms = ''
         if "🔬 ТОП ЛАБОРАТОРИЙ БЕСЕДЫ" in a:
-            sms += "🥰 топ вкусняшек чата:\n"
+            sms += f"<emoji document_id=6205973162828498885>🥱</emoji> иммунодрочеры?:\n\n"
             
         if "🔬 ТОП ЛАБОРАТОРИЙ ПО" in a:
             sms += "🔬 ТOП ЛАБОРАТOРИЙ ПО БИO-ОПЫТУ ЗАРAЖЁННЫХ:\n" #ТOП ИММУНОДРОЧЕРОВ:
@@ -1692,23 +1692,21 @@ class BioMod(loader.Module):
             return 
         get_me = await message.client.get_me()
         emojis = [
-            "<emoji document_id=5219806684066618617>🍎</emoji>",
-            "<emoji document_id=5215493819641895305>🚛</emoji>",
-            "<emoji document_id=5213452215527677338>⏳</emoji>",
-            "<emoji document_id=5213107179329953547>⏰</emoji>",
-            "<emoji document_id=5314775862749438888>🔠</emoji>",
-            "<emoji document_id=5316939156172053790>🟪</emoji>",
-            "<emoji document_id=5314362416312623719>🔝</emoji>",
-            "<emoji document_id=5316567190529384159>🤔</emoji>"
+            "<emoji document_id=6325557756862400290>💃</emoji>",
+            "<emoji document_id=6325864821254261148>😏</emoji>",
+            "<emoji document_id=6205973162828498885>🥱</emoji>",
+            "<emoji document_id=6327931937474217403>🤷</emoji>",
+            "<emoji document_id=5272019978713833214>🚽</emoji>"
+
         ]
         emoji = f"{random.choices(emojis, k=1)[0]} " if get_me.premium else ""
 
         hiunya = [
-            f"{emoji}<b>щас ебанёт)...</b> {utils.ascii_face()}",
-            f"{emoji}<b>взлом пентагона...</b> {utils.ascii_face()}",
-            f"{emoji}<b>доза героина поступает в кровь...</b> {utils.ascii_face()}"
+            f"{emoji}<b>aboslute?</b>",
+            f"{emoji}<b>я проклят?</b>",
         ]
-        msg = f"{emoji}<b>Loading... {utils.ascii_face()}<b>"
+        random.choices(hiunya)
+        msg = f"{random.choices(hiunya, k=1)[0]}"
         if random.randint(1, 100) > 95:
             msg = random.choices(hiunya, k=1)[0]
         await utils.answer(message, msg)
@@ -1757,11 +1755,11 @@ class BioMod(loader.Module):
         await self.inline.form(
             sms,
             reply_markup={
-                            "text": f"🔻 Close",
+                            "text": f"Закрыть?",
                             "callback": self.inline__close,
             },
             message=message,
-            disable_security=False
+            disable_security=False,
         )
         
 
