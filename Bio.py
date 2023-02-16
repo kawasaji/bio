@@ -205,7 +205,7 @@ class BioMod(loader.Module):
                 user = await message.client.get_entity(message.sender_id)
                 link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
                 return await message.reply(
-                    f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
+                    f"<emoji document_id=5269301569358142746>🗿</emoji> {link}\n"
                     f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
                 )
             user = 0
@@ -227,14 +227,14 @@ class BioMod(loader.Module):
 
             link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
             return await message.reply(
-                f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
+                f"<emoji document_id=5269301569358142746>🗿</emoji> {link}\n"
                 f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
             )
         if not args:
             user = await message.client.get_entity(reply.sender_id)
             link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
             return await message.reply(
-                f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
+                f"<emoji document_id=5269301569358142746>🗿</emoji> {link}\n"
                 f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
             )
 
@@ -255,7 +255,7 @@ class BioMod(loader.Module):
             return await message.reply("ты ввел хуйню реально")
         link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
         return await message.reply(
-            f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
+            f"<emoji document_id=5269301569358142746>🗿</emoji> {link}\n"
             f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
         )
 
@@ -283,7 +283,7 @@ class BioMod(loader.Module):
         args = utils.get_args_raw(message)
         if not args:
             vlad = reply.sender_id
-            hui = f'<code>/заразить 10 @{vlad}<code>\nспасибо <emoji document_id=5215327827745839526>❤️</emoji>'
+            hui = f'<code>/заразить 10 @{vlad}<code>\nспасибо <emoji document_id=5269445021265829453>🔫</emoji>'
             
 
 
@@ -568,7 +568,7 @@ class BioMod(loader.Module):
                 return await message.edit(
                     self.strings("empty_zar")
                 )
-            sms = "🔖 Список ваших заражений:\n\n"
+            sms = f"<emoji document_id=4987978003129566032>😤</emoji> Список ваших заражений:\n\n"
             sms += ''.join(
                 f"• {key}  +{value[0]} [{value[1]}]\n"
                     for key, value in infList.items()
@@ -1305,20 +1305,20 @@ class BioMod(loader.Module):
                     return
                 sms = ""
                 for i in lab_lines: # цикл for по всем строкам в тексте лабы
-                    if "🧪 Готовых патогенов:" in i:
+                    if "<emoji document_id=4983351017681715711>☺️</emoji> Готовых патогенов:" in i:
                         sms += f"{i}\n"
-                    if "⏱ Новый патоген:" in i:
+                    if "<emoji document_id=5294492325643296676>😆</emoji> Новый патоген:" in i:
                         sms += f"{i}\n"
-                    if "☣️ Био-опыт:" in i:
+                    if "<emoji document_id=6325524440801084490>🤣</emoji> Био-опыт:" in i:
                         sms += f"{i}\n"
-                    if "🧬 Био-ресурс:" in i:
+                    if "<emoji document_id=6325331270351979944>😄</emoji> Био-ресурс:" in i:
                         sms += f"{i}\n"
                     if "❗️ Руководитель в состоянии горячки, вызванной болезнью" in i:
-                        s = i.replace("❗️ Руководитель в состоянии горячки, вызванной болезнью ", "")
-                        sms += f"🤒 Горячка от {s}\n"
+                        s = i.replace("<emoji document_id=5818665600624365278>⏺</emoji> Руководитель в состоянии горячки, вызванной болезнью ", "")
+                        sms += f"<emoji document_id=5271892860566774733>🚪</emoji> Горячка от {s}\n"
                     if "❗️ Руководитель в состоянии горячки ещё" in i:
-                        s = i.replace("❗️ Руководитель в состоянии горячки ещё ", "")
-                        sms += f"🤒 Горячка на {s}\n"                        
+                        s = i.replace("<emoji document_id=5818665600624365278>⏺</emoji> Руководитель в состоянии горячки ещё ", "")
+                        sms += f"<emoji document_id=5271892860566774733>🚪</emoji> Горячка на {s}\n"
                 await message.reply(sms) # ответ
 
 #######################################################
