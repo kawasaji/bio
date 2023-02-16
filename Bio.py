@@ -74,8 +74,8 @@ class BioMod(loader.Module):
 
         "aicmd":
             "<b>🥷🏻</b> <a href='tg://openmessage?user_id={}'>{}</a>\n"
-            "<b>🆔:</b> <code>@{}</code>",
-        "myid": "<b>My 🆔:</b> <code>@{}</code>",
+            "<b><emoji document_id=5294492325643296676>😆</emoji>:</b> <code>@{}</code>",
+        "myid": "<b>My <emoji document_id=5294492325643296676>😆</emoji>:</b> <code>@{}</code>",
         
 
         "guidedov":    
@@ -127,13 +127,13 @@ class BioMod(loader.Module):
 
         "user_rm": "❎ Саппорт <b><code>{}</code></b> удалён.",
         
-        "user_add": "<emoji document_id=5212932275376759608>✅</emoji> Саппорт <b><code>{}</code></b> добавлен!",
+        "user_add": " <emoji document_id=5465489572290894996>⌨️</emoji> Саппорт <b><code>{}</code></b> добавлен!",
         
         "wrong_nick": "<b>📝 Введите ник.</b>",
         
         "nick_add": "🔰 Ник <b>{}</b> установлен!",
         
-        "dov_start": "<b><emoji document_id=5212932275376759608>✅</emoji> Успешно запущено!</b>",
+        "dov_start": "<b><emoji document_id=5465489572290894996>⌨️</emoji> Успешно запущено!</b>",
         
         "dov_stop": "<b>❎ Успешно остановлено.</b>",
         
@@ -206,7 +206,7 @@ class BioMod(loader.Module):
                 link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
                 return await message.reply(
                     f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
-                    f"<emoji document_id=4918133202012340741>👤</emoji> <code>@{user.id}</code>"
+                    f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
                 )
             user = 0
             if re.fullmatch(r"@\D\w{3,32}", args[0], flags=re.ASCII):
@@ -228,14 +228,14 @@ class BioMod(loader.Module):
             link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
             return await message.reply(
                 f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
-                f"<emoji document_id=4918133202012340741>👤</emoji> <code>@{user.id}</code>"
+                f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
             )
         if not args:
             user = await message.client.get_entity(reply.sender_id)
             link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
             return await message.reply(
                 f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
-                f"<emoji document_id=4918133202012340741>👤</emoji> <code>@{user.id}</code>"
+                f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
             )
 
         user = 0
@@ -256,7 +256,7 @@ class BioMod(loader.Module):
         link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
         return await message.reply(
             f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
-            f"<emoji document_id=4918133202012340741>👤</emoji> <code>@{user.id}</code>"
+            f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
         )
 
 ### Module Num by trololo_1
