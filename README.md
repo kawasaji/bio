@@ -5,11 +5,7 @@
 <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/kawasaji/bio">
 </p>
 
-<hr>
-
-<h2>
-  <b>
+<h2 style="font-weight: bold">
     absolute?
-  </b>
 </h2>
 
