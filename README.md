@@ -5,7 +5,11 @@
 <img alt="GitHub repo file count" src="https://img.shields.io/github/directory-file-count/kawasaji/bio">
 </p>
 
-<h2 style="font-weight: bold">
+<h1 style="font-weight: bold">
     absolute?
-</h2>
+</h1>
 
+- Изменены эмодзи в жертвах
+- Изменены эмодзи в лабе
+- Изменены эмодзи в !ай
+- Изменен !б, изменены названая и эмодзи
