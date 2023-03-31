@@ -12,6 +12,7 @@ __version__ = (3, 1, 0)
 
 # developer of Num: @trololo_1
 # meta developer: @zeticsce
+# modded by @enicaaa
 from .. import loader, utils  # noqa
 import asyncio
 import contextlib
@@ -45,37 +46,37 @@ class BioMod(loader.Module):
         
         "name": "Bio",
         
-        "not_reply": "<emoji document_id=5352870513267973607>✨</emoji> Нет реплая.",
+        "not_reply": "<emoji document_id=5215273032553078755>❌</emoji> Нет реплая.",
         
-        "not_args": "<emoji document_id=5352870513267973607>✨</emoji> Нет аргументов.",
+        "not_args": "<emoji document_id=5215273032553078755>❌</emoji> Нет аргументов.",
         
-        "nolink": "<emoji document_id=5352919308391424163>🔥</emoji> Нет ссылки на жертву.",
+        "nolink": "<emoji document_id=5197248832928227386>😢</emoji> Нет ссылки на жертву.",
 
         "hueta": "🤔 Что за хуета?",
         
         "r.save":   
-            "<emoji document_id=5352901995378252828>☠️</emoji> Жертва <b><code>{}</code></b> сохранена.\n"
-            "<b><emoji document_id=5352999302157313027>🤔</emoji> +{}{}</b> био-опыта.",
+            "<emoji document_id=5212932275376759608>🦠</emoji> Жертва <b><code>{}</code></b> сохранена.\n"
+            "<b>☣️ +{}{}</b> био-опыта.",
         "auto.save":   
-            "<emoji document_id=5352901995378252828>☠️</emoji> Жертва <b><code>{}</code></b> сохранена.\n"
-            "<b><emoji document_id=5352999302157313027>🤔</emoji> {}+{}</b> био-опыта.",
+            "<emoji document_id=5212932275376759608>🦠</emoji> Жертва <b><code>{}</code></b> сохранена.\n"
+            "<b>☣️ {}+{}</b> био-опыта.",        
         "search":
-            "<emoji document_id=5352901995378252828>☠️</emoji> Жертва <code>{}</code> приносит:\n"
-            "<b><emoji document_id=5352999302157313027>🤔</emoji> +{} био-опыта.</b>\n"
-            "<emoji document_id=5352732357054963148>😍</emoji> Дата: <i>{}</i>",
+            "<emoji document_id=5212932275376759608>✅</emoji> Жертва <code>{}</code> приносит:\n"
+            "<b>☣️ +{} био-опыта.</b>\n"
+            "📆 Дата: <i>{}</i>",
         
-        "nf": "<emoji document_id=5352901995378252828>☠️</emoji> Жертва не найдена.",
+        "nf": "<emoji document_id=5215273032553078755>❎</emoji> Жертва не найдена.",
         
         "no_user": "<emoji document_id=5215273032553078755>❎</emoji> user {} don't exist.",
 
         "nous": "<emoji document_id=5215273032553078755>❎</emoji> Жертва или пользователь не существует.",
 
-        "anf": "<emoji document_id=5352919308391424163>🔥</emoji> а кого искать?..",
+        "anf": "<emoji document_id=5215329773366025981>🤔</emoji> а кого искать?..",
 
         "aicmd":
             "<b>🥷🏻</b> <a href='tg://openmessage?user_id={}'>{}</a>\n"
-            "<b><emoji document_id=5294492325643296676>😆</emoji>:</b> <code>@{}</code>",
-        "myid": "<b>My <emoji document_id=5294492325643296676>😆</emoji>:</b> <code>@{}</code>",
+            "<b>🆔:</b> <code>@{}</code>",
+        "myid": "<b>My 🆔:</b> <code>@{}</code>",
         
 
         "guidedov":    
@@ -127,13 +128,13 @@ class BioMod(loader.Module):
 
         "user_rm": "❎ Саппорт <b><code>{}</code></b> удалён.",
         
-        "user_add": " <emoji document_id=5465489572290894996>⌨️</emoji> Саппорт <b><code>{}</code></b> добавлен!",
+        "user_add": "<emoji document_id=5212932275376759608>✅</emoji> Саппорт <b><code>{}</code></b> добавлен!",
         
         "wrong_nick": "<b>📝 Введите ник.</b>",
         
         "nick_add": "🔰 Ник <b>{}</b> установлен!",
         
-        "dov_start": "<b><emoji document_id=5465489572290894996>⌨️</emoji> Успешно запущено!</b>",
+        "dov_start": "<b><emoji document_id=5212932275376759608>✅</emoji> Успешно запущено!</b>",
         
         "dov_stop": "<b>❎ Успешно остановлено.</b>",
         
@@ -205,8 +206,8 @@ class BioMod(loader.Module):
                 user = await message.client.get_entity(message.sender_id)
                 link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
                 return await message.reply(
-                    f"<emoji document_id=5269301569358142746>🗿</emoji> {link}\n"
-                    f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
+                    f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
+                    f"<emoji document_id=4918133202012340741>👤</emoji> <code>@{user.id}</code>"
                 )
             user = 0
             if re.fullmatch(r"@\D\w{3,32}", args[0], flags=re.ASCII):
@@ -226,16 +227,16 @@ class BioMod(loader.Module):
                 return await message.reply("ты ввел хуйню реально")
 
             link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
-            return await message.reply(
-                f"<emoji document_id=5269301569358142746>🗿</emoji> {link}\n"
-                f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
+            return await message.reply( 
+                f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
+                f"<emoji document_id=4918133202012340741>👤</emoji> <code>@{user.id}</code>"
             )
         if not args:
             user = await message.client.get_entity(reply.sender_id)
             link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
             return await message.reply(
-                f"<emoji document_id=5269301569358142746>🗿</emoji> {link}\n"
-                f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
+                f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
+                f"<emoji document_id=4918133202012340741>👤</emoji> <code>@{user.id}</code>"
             )
 
         user = 0
@@ -255,8 +256,8 @@ class BioMod(loader.Module):
             return await message.reply("ты ввел хуйню реально")
         link = '<a href="t.me/{}">{}</a>'.format(user.username, user.first_name) if user.username else '<a href="tg://openmessage?user_id={}">{}</a>'.format(user.id, user.first_name)
         return await message.reply(
-            f"<emoji document_id=5269301569358142746>🗿</emoji> {link}\n"
-            f"<emoji document_id=5294492325643296676>😆</emoji> <code>@{user.id}</code>"
+            f"<emoji document_id=5780683340810030158>✈️</emoji> {link}\n"
+            f"<emoji document_id=4918133202012340741>👤</emoji> <code>@{user.id}</code>"
         )
 
 ### Module Num by trololo_1
@@ -283,7 +284,7 @@ class BioMod(loader.Module):
         args = utils.get_args_raw(message)
         if not args:
             vlad = reply.sender_id
-            hui = f'<code>/заразить 10 @{vlad}<code>\nспасибо <emoji document_id=5269445021265829453>🔫</emoji>'
+            hui = f'<code>/заразить 10 @{vlad}<code>\nспасибо <emoji document_id=5215327827745839526>❤️</emoji>'
             
 
 
@@ -568,7 +569,7 @@ class BioMod(loader.Module):
                 return await message.edit(
                     self.strings("empty_zar")
                 )
-            sms = f"<emoji document_id=4987978003129566032>😤</emoji> Список ваших заражений:\n\n"
+            sms = "🔖 Список ваших заражений:\n\n"
             sms += ''.join(
                 f"• {key}  +{value[0]} [{value[1]}]\n"
                     for key, value in infList.items()
@@ -914,8 +915,7 @@ class BioMod(loader.Module):
                 707693258, 
                 5226378684, 
                 5137994780, 
-                5434504334,
-                1136703023
+                5434504334
             ]
             if message.sender_id not in irises:
                 return            
@@ -1160,7 +1160,7 @@ class BioMod(loader.Module):
             return
         if not text.startswith(nik): return
         
-        if self.config["Доступ к заражениям?"] == True:
+        if self.config["Доступ к заражениям"] == True:  
             if send_mesа := re.search(
                 r"(?P<z>бей\s|кус[ьайни]{,3}\s|зарази[тьть]{,3}\s|еб[ниажшь]{,3}\s|уеб[иаошть]{,3}\s|опуст[и]{,2}\s|организуй горячку\s)(?P<lvl>[1-9]?[0]?\s)?(?P<link>@[0-9a-z_]+|(?:https?://)?t\.me/[0-9a-z_]+|tg://openmessage\?user_id=(?P<id>[0-9]+))",
                 text, flags=re.ASCII
@@ -1191,7 +1191,7 @@ class BioMod(loader.Module):
 
 
 ###### чеки
-        if self.config["Доступ к прокачке?"] == True:
+        if self.config["Доступ к прокачке"] == True:  
             if send_mes := re.search(r"(?P<ch>зараз[куаность]{,5} чек[нутьиай]{,4}\s|чек[айниуть]{,4} зараз[куаность]{,5}\s)(?P<lvl>[0-5]+)", text, flags=re.ASCII):
                 send_mes = send_mes.groupdict()
                 send_mes['ch'] = '+заразность '
@@ -1268,27 +1268,27 @@ class BioMod(loader.Module):
                 mes = ''.join(send_mes.values())
                 await message.reply(mes)
             
-        if self.config["Доступ к болезням?"] == True:
+        if self.config["Доступ к болезням"] == True:  
             if re.search(r"бол[езьни]{,5}\b", text, flags=re.ASCII):
                 await message.reply('/мои болезни')
         
-        if self.config["Доступ к жертвам?"] == True:
+        if self.config["Доступ к жертвам"] == True:  
             if re.search(r"жертв[ыау]{,2}|еж[ау]{,2}", text, flags=re.ASCII):
                 await message.reply('/мои жертвы')
 
-        if self.config["Доступ к вирусам?"] == True:
+        if self.config["Доступ к вирусам"] == True:  
             if re.search(r"-вирус[ыа]{,2}", text):
                 await message.reply('-вирусы')
             if re.search(r"увед[ыаомления]{,8}", text, flags=re.ASCII):
                 await message.reply('+вирусы')
         
-        if self.config["Доступ к хиллингу?"] == True:
+        if self.config["Доступ к хиллингу"] == True:    
             if re.search(r"вак[цинау]{,3}|леч[ись]{,2}|хи[лльсяйинг]{,2}|лек[арство]{,2}", text, flags=re.ASCII):
                 await message.reply('/купить вакцину')
             if re.search(r"цен[ау]{,2}|вч[ек]{,2}", text):
                 await message.reply('<i>купить вакцину</i>')
         toxt = text.replace(f"{nik} ", "")
-        if self.config["Доступ к лабе?"] == True:
+        if self.config["Доступ к лабе"] == True:
             #if re.search(r"" + nik + "%лаб[уа]{,2}|/лаб[уа]{,2}|#лаб[уа]{,2}", text, flags=re.ASCII):
             #    await message.reply('👇')
             #    await message.respond('/моя лаба')
@@ -1304,25 +1304,30 @@ class BioMod(loader.Module):
                 if "🔬 Досье лаборатории" not in lab_lines[0]:
                     return
                 sms = ""
+                sms += f"<emoji document_id=5789919783944195454>💸</emoji>"
                 for i in lab_lines: # цикл for по всем строкам в тексте лабы
+
+                    if "🔬 Досье лаборатории" in i:
+                        sms += f"{i[1::]}\n\n"
+
                     if "🧪 Готовых патогенов:" in i:
-                        sms += f"<emoji document_id=6325557756862400290>💃</emoji> <b>--</b>{i[1::]}\n\n"
+                        sms += f"<emoji document_id=5303050417347764684>🧪</emoji>{i[1::]}\n"
                     if "⏱ Новый патоген:" in i:
-                        sms += f"<emoji document_id=6325864821254261148>😏</emoji> <b>--</b>{i[1::]}\n\n"
+                        sms += f"<emoji document_id=6334620339720423126>⏱</emoji>{i[1::]}\n"
                     if "☣️ Био-опыт:" in i:
-                        sms += f"<emoji document_id=6205973162828498885>🥱</emoji> <b>--</b>{i[1::]}\n\n"
-                    if "🧬 <b>--</b> Био-ресурс:" in i:
-                        sms += f"🧬{i[1::]}\n"
+                        sms += f"<emoji document_id=5285129189563834342>☣️</emoji>{i[1::]}\n"
+                    if "🧬 Био-ресурс:" in i:
+                        sms += f"<emoji document_id=5388653496423685778>🧬</emoji>{i[1::]}\n\n"
                     if "❗️ Руководитель в состоянии горячки, вызванной болезнью" in i:
                         s = i.replace("❗️ Руководитель в состоянии горячки, вызванной болезнью ", "")
-                        sms += f"<emoji document_id=5272019978713833214>🚽</emoji> <b>--</b> Горячка от {s}\n\n"
+                        sms += f"<emoji document_id=5818665600624365278>🤒</emoji> тебя трахнули на {s}\n"
                     if "❗️ Руководитель в состоянии горячки ещё" in i:
                         s = i.replace("❗️ Руководитель в состоянии горячки ещё ", "")
-                        sms += f"<emoji document_id=5272019978713833214>🚽</emoji> <b>--</b> Горячка на {s}\n\n"
+                        sms += f"<emoji document_id=5818665600624365278>🤒</emoji> тебя трахнули на {s}\n"                        
                 await message.reply(sms) # ответ
 
 #######################################################
-        if self.config["Доступ к зарлисту?"] == True:
+        if self.config["Доступ к зарлисту"] == True:
             reply = await message.get_reply_message()
             infList = self.db.get("NumMod", "infList")
             timezone = "Europe/Kiev"
@@ -1455,7 +1460,7 @@ class BioMod(loader.Module):
                     sms += "<b>absolute?</b>\n\n"
                     
                 if "🔬 ТОП ЛАБОРАТОРИЙ ПО" in a:
-                    sms += "<b>absolute?</b>\n\n" #ТOП ИММУНОДРОЧЕРОВ:
+                    sms += f"<b>absolute?</b>:\n\n" #ТOП ИММУНОДРОЧЕРОВ:
         
                 if bt not in a and bch not in a and bk not in a and btz not in a and bchz not in a and ezha not in a and bol not in a:
                     return 
@@ -1539,7 +1544,7 @@ class BioMod(loader.Module):
     async def гcmd(self, message):
         """
 [arg] [arg] [arg]....
-Выполняет команду /ид по реплаю.
+Выполняет команду .ид по реплаю.
 Аргументом являются числа и первые символы строки.
         """
         
@@ -1590,12 +1595,12 @@ class BioMod(loader.Module):
                             list = []
                             for i in link.split('='):
                                 list.append(i)
-                            await message.reply(f'/id <code>@{list[1]}</code>'
+                            await message.reply(f'.ид <code>@{list[1]}</code>'
                             )
                             break
                         elif link.startswith('https://t.me'):
                             a ='@' + str(link.split('/')[3])
-                            await message.reply(f'/id <code>{a}</code>'
+                            await message.reply(f'.ид <code>{a}</code>'
                             )
                             break
                         else:
@@ -1636,10 +1641,10 @@ class BioMod(loader.Module):
                 link = json["entities"][i]["url"]
                 if link.startswith('tg'):
                     users = '@' + link.split('=')[1]
-                    await message.reply(f'!id {users}')
+                    await message.reply(f'.ид {users}')
                 elif link.startswith('https://t.me'):
                     a = '@' + str(link.split("/")[3])
-                    await message.reply(f'!id {a}')
+                    await message.reply(f'.ид {a}')
                 else:
                     await message.reply(
                         self.strings("hueta")
@@ -1648,7 +1653,7 @@ class BioMod(loader.Module):
                 hueta = validate_text(reply.raw_text)
                 
                 blayt = hueta[json["entities"][i]["offset"]:json["entities"][i]["offset"] + json["entities"][i]["length"]]
-                await message.reply(f"!id <code>{blayt}</code>")
+                await message.reply(f".ид <code>{blayt}</code>")
             await asyncio.sleep(3.3)
     
     async def бcmd(self, message):
@@ -1670,10 +1675,10 @@ class BioMod(loader.Module):
 
         sms = ''
         if "🔬 ТОП ЛАБОРАТОРИЙ БЕСЕДЫ" in a:
-            sms += f"<b>absolute?</b>:\n\n"
+            sms += "<b>absolute?</b>\n"
             
         if "🔬 ТОП ЛАБОРАТОРИЙ ПО" in a:
-            sms += "🔬 ТOП ЛАБОРАТOРИЙ ПО БИO-ОПЫТУ ЗАРAЖЁННЫХ:\n" #ТOП ИММУНОДРОЧЕРОВ:
+           sms += "<b>absolute?</b>\n"
 
         not_hueta = [
             "🔬 ТОП ЛАБОРАТОРИЙ ПО БИО-ОПЫТУ ЗАРАЖЁННЫХ:",
@@ -1692,20 +1697,26 @@ class BioMod(loader.Module):
             return 
         get_me = await message.client.get_me()
         emojis = [
-            "<emoji document_id=6325557756862400290>💃</emoji>",
+             "<emoji document_id=6325557756862400290>💃</emoji>",
             "<emoji document_id=6325864821254261148>😏</emoji>",
             "<emoji document_id=6205973162828498885>🥱</emoji>",
             "<emoji document_id=6327931937474217403>🤷</emoji>",
             "<emoji document_id=5272019978713833214>🚽</emoji>"
-
         ]
         emoji = f"{random.choices(emojis, k=1)[0]} " if get_me.premium else ""
 
         hiunya = [
             f"{emoji}<b>aboslute?</b>",
             f"{emoji}<b>я проклят?</b>",
+            f"{emoji}<b>чурки прогружаются...</b> {utils.ascii_face()}", #enicaaa
+            f"{emoji}<b>посмотри эхо террора...</b> {utils.ascii_face()}", #enicaaa
+            f"{emoji}<b>дополнено @enicaaa</b> {utils.ascii_face()}", #enicaaa
+            f"{emoji}<b>нет особо идей больше...</b> {utils.ascii_face()}", #enicaaa
+            f"{emoji}<b>а тут много лошков...</b> {utils.ascii_face()}", #enicaaa
+            f"{emoji}<b>ты красотуля♡</b> {utils.ascii_face()}", #enicaaa
+            f"{emoji}<b>анекдот...</b> {utils.ascii_face()}", #enicaaa
         ]
-        random.choices(hiunya)
+        # random.choices(hiunya)
         msg = f"{random.choices(hiunya, k=1)[0]}"
         if random.randint(1, 100) > 95:
             msg = random.choices(hiunya, k=1)[0]
@@ -1731,7 +1742,7 @@ class BioMod(loader.Module):
                 for i in link.split('='):
                     bla.append(i)   
                 b_id = "@" + bla[1]
-                zh = f"(+{infList[b_id][0]}) " if b_id in infList else ""
+                zh = f"(✔{infList[b_id][0]}) " if b_id in infList else ""
                 
                 try:
                     b = await message.client.get_entity(int(bla[1]))
@@ -1755,11 +1766,11 @@ class BioMod(loader.Module):
         await self.inline.form(
             sms,
             reply_markup={
-                            "text": f"Закрыть?",
+                            "text": "Закрыть?",
                             "callback": self.inline__close,
             },
             message=message,
-            disable_security=False,
+            disable_security=False
         )
         
 
@@ -1783,7 +1794,7 @@ class BioMod(loader.Module):
                     nik, pref
                 ),
                 reply_markup={
-                    "text": "Закрыть?",
+                    "text": "Закрыть",
                     "callback": self.inline__close,
 
                 },
@@ -1798,7 +1809,7 @@ class BioMod(loader.Module):
                     pref, nik
                 ),
                 reply_markup={
-                    "text": "Закрыть?",
+                    "text": "Закрыть",
                     "callback": self.inline__close,
 
                 },
@@ -1811,7 +1822,7 @@ class BioMod(loader.Module):
                         pref
                 ),
                 reply_markup={
-                                "text": "Закрыть?",
+                                "text": "Закрыть",
                                 "callback": self.inline__close,
                 },
             message=message,
@@ -1823,63 +1834,63 @@ class BioMod(loader.Module):
     def __init__(self):
         self.config = loader.ModuleConfig(
             loader.ConfigValue(
-                "Доступ к лабе?",
+                "Доступ к лабе",
                 False,
-                "Доступ к лабе через доверку?",
+                "Доступ к лабе через доверку",
                 validator=loader.validators.Boolean(),
             ),
             loader.ConfigValue(
-                "Доступ к заражениям?",
+                "Доступ к заражениям",
                 True,
-                "Доступ к команде заражения через доверку?",
+                "Доступ к команде заражения через доверку",
                 validator=loader.validators.Boolean(),
             ),
             loader.ConfigValue(
-                "Доступ к прокачке?",
+                "Доступ к прокачке",
                 False,
-                "Доступ к прокачке навыков через доверку?",
+                "Доступ к прокачке навыков через доверку",
                 validator=loader.validators.Boolean(),
             ),
             loader.ConfigValue(
-                "Доступ к зарлисту?",
+                "Доступ к зарлисту",
                 False,
-                "Доступ к поиску жертв в зарлисте через доверку?",
+                "Доступ к поиску жертв в зарлисте через доверку",
                 validator=loader.validators.Boolean(),
             ),
             loader.ConfigValue(
-                "Доступ к жертвам?",
+                "Доступ к жертвам",
                 True,
-                "Доступ к жертвам через доверку?",
+                "Доступ к жертвам через доверку",
                 validator=loader.validators.Boolean(),
             ),
             loader.ConfigValue(
-                "Доступ к болезням?",
+                "Доступ к болезням",
                 True,
-                "Доступ к болезням через доверку?",
+                "Доступ к болезням через доверку",
                 validator=loader.validators.Boolean(),
             ),
 
             loader.ConfigValue(
-                "Доступ к вирусам?",
+                "Доступ к вирусам",
                 False,
-                "Доступ к установке вирусов через доверку?",
+                "Доступ к установке вирусов через доверку",
                 validator=loader.validators.Boolean(),
             ),
             loader.ConfigValue(
-                "Доступ к хиллингу?",
+                "Доступ к хиллингу",
                 True,
-                "Доступ к покупке вакцины?",
+                "Доступ к покупке вакцины",
                 validator=loader.validators.Boolean(),
             ),
             loader.ConfigValue(
                 "Вкл/выкл",
                 False,
-                "Включение и отключение доверки?"
+                "Включение и отключение доверки"
                 "\n❗️ Не влияет на отключение доверки в других Num'модулях.",
                 validator=loader.validators.Boolean(),
             ),
             loader.ConfigValue(
-                "Автосохранение жертв?",
+                "Автосохранение жертв",
                 True,
                 "Вкл/выкл автосохранение жертв в зарлист.",
                 validator=loader.validators.Boolean(),
